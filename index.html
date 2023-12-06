@@ -7,12 +7,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="/styles/header.css">
   <link rel="stylesheet" href="/styles/banner.css">
+  <link rel="stylesheet" href="/styles/carrosel.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <header class="cabecalho">
     <div class="container">
       <input type="checkbox" id="menu" class="container__botao">
@@ -47,13 +50,67 @@
     </div>
 
   </header>
+
   <section class="banner">
     <h2 class="banner__titulo">Já sabe por onde começar?</h2>
     <p class="banner__texto">Encontre em nossa estante o que precisa para seu desenvolvimento!</p>
     <input type="search" class="banner__pesquisa" placeholder="Qual será sua próxima leitura?">
   </section>
-  <main>
-  </main>
-  <footer></footer>
+
+  <section class="carrosel">
+    <h2 class="carrosel__titulo">Novos lançamentos</h2>
+    <!-- Slider main container -->
+    <div class="swiper">
+     <!-- Additional required wrapper -->
+         <!-- If we need pagination -->
+         <div class="swiper-pagination"></div>
+    <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide"><img src="imagens/ApacheKafka.svg" alt="livro sobre apache da alura books"></div>
+    <div class="swiper-slide"><img src="imagens/Tuning.svg" alt="livro de tuning da alura books"></div>
+    <div class="swiper-slide"><img src="imagens/Javascript.svg" alt="livro de javascript da alura books"></div>
+    <div class="swiper-slide"><img src="imagens/Guia-Front-end.png" alt="livro de angular da alura books"></div>
+    <div class="swiper-slide"><img src="imagens/Portugol.svg" alt="livro de Portugol da alura books">
+      </div>
+     </div>
+    </div>
+
+    <div class="card">
+      <!-- 1 linha  -->
+      <div class="card__descripcao">
+        <!-- 1 coluna -->
+        <div class="descripcao">
+          <h3 class="descripcao__titulo">Talvez você também se interesse por...</h3>
+          <h2 class="descripcao__titulo-livro">Angular 11 e Firebase</h2>
+          <p class="descripcao__texto">Construindo uma aplicação integrada com a plataforma do Google.</p>
+        </div>
+        <!-- 2 coluna -->
+        <img src="imagens/Mask-group.svg" alt="imagem de angular">
+      </div>
+
+      <!-- 2 linha -->
+      <div class="card__botoes">
+        <!-- 1 coluna -->
+        <ul class="botoes">
+          <li class="botoes__item"><img src="imagens/Favoritos.svg" alt="favoritar livro"></li>
+          <li class="botoes__item"><img src="imagens/Compras.svg" alt="Adicionar ao carrinho de Compras"></li>
+        </ul>
+        <!-- 2 coluna -->
+        <a href="#" class="botoes__ancora">Saiba mais</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+     spaceBetween: 3,
+     slidesPerView: 3,
+     pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      },
+    });
+  </script>
 </body>
 </html>
