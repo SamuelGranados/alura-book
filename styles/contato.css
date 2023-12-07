@@ -3,7 +3,7 @@
   padding: 1em;
 }
 
-.contato__titulo, .contato__texto {
+.contato__titulo {
   font-size: 18px;
   font-size: 500;
   background: var(--azul-degrade);
@@ -33,3 +33,29 @@
   padding: 0.4em 2em;
 }
 
+@media screen and (min-width: 1024px) {
+  .contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .contato__titulo {
+    font-size: 24px;
+  }
+
+  .contato__descripcao {
+    width: 30%;
+  }
+
+  .contato__email {
+    width: 30%;
+  }  
+}
+
+@media screen and (min-width: 1728px) {
+  .contato {
+    padding: 3em 20vw;
+  }
+}
